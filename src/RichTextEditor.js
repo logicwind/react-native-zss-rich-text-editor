@@ -293,7 +293,7 @@ export default class RichTextEditor extends Component {
     //in release build, external html files in Android can't be required, so they must be placed in the assets folder and accessed via uri
     const pageSource = PlatformIOS ? require('./editor.html') : { uri: 'file:///android_asset/editor.html' };
     return (
-      <View style={{flex: 1}}>
+      <View style={{flex: 1, backgroundColor:'transparent'}}>
         <WebViewBridge
           hideKeyboardAccessoryView={true}
           keyboardDisplayRequiresUserAction={false}
@@ -617,10 +617,10 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)'
+    backgroundColor: 'rgba(0, 0, 0, 0)'
   },
   innerModal: {
-    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    backgroundColor: 'transparent',
     paddingTop: 20,
     paddingBottom: PlatformIOS ? 0 : 20,
     paddingLeft: 20,
