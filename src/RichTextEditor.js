@@ -541,6 +541,14 @@ export default class RichTextEditor extends Component {
     this._sendAction(actions.setPlatform, Platform.OS);
   }
 
+  disableTitleEditing() {
+    this._sendAction(actions.disableTitleEditing);
+  }
+
+  enableTitleEditing() {
+    this._sendAction(actions.enableTitleEditing);
+  }
+
   async getTitleHtml() {
     return new Promise((resolve, reject) => {
       this.titleResolve = resolve;
