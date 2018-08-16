@@ -1642,7 +1642,14 @@
 			zss_editor.setPlatform = function(platform) {
 				zss_editor.platform = platform;
 			}
+			
+			zss_editor.disableTitleEditing = function(html) {
+				$('#zss_editor_title').attr('contenteditable','false');
+			}
 
+			zss_editor.enableTitleEditing = function(html) {
+				$('#zss_editor_title').attr('contenteditable','true');
+			}
 			//end
 		</script>
 
