@@ -33,7 +33,7 @@ export default class RichTextEditor extends Component {
   };
 
   constructor(props) {
-    super(props);
+    super(props); 
     this._sendAction = this._sendAction.bind(this);
     this.registerToolbar = this.registerToolbar.bind(this);
     this.onBridgeMessage = this.onBridgeMessage.bind(this);
@@ -155,7 +155,9 @@ export default class RichTextEditor extends Component {
           this.props.hiddenTitle && this.hideTitle();
           this.props.enableOnChange && this.enableOnChange();
 
-          this.props.editorInitializedCallback && this.props.editorInitializedCallback();
+          setTimeout(() => {
+            this.props.editorInitializedCallback && this.props.editorInitializedCallback();
+          }, 500)
 
           break;
         case messages.LINK_TOUCHED:
