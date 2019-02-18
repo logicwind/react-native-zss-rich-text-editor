@@ -1572,6 +1572,7 @@
 			}
 
 			zss_editor.focusContent = function() {
+				$('#zss_editor_content').focus();	
 				var editor = $('#zss_editor_content');
 				var range = document.createRange();
 				range.selectNodeContents(editor.get(0));
